@@ -3,6 +3,7 @@ import * as Photos from './services/photos';
 import {Photo} from './types/photo'
 import {useState, useEffect, FormEvent} from 'react'
 import {PhotoItem} from './components/PhotoItem'
+import { toast } from 'react-toastify';
 
 const App = () => {
 
@@ -37,9 +38,10 @@ const App = () => {
       }else{
         let newPhotoList = [...photos];
         newPhotoList.push(result);
-        setPhotos(newPhotoList);
+        setPhotos(newPhotoList)
+        toast.info('Deu certo');
+        setUploading(false);
       }
-      setUploading(false);
     }
   }
 
@@ -55,6 +57,7 @@ const App = () => {
                 <div className='uploading'>Carregando...</div>
               }
               <input type='submit' value='Enviar'/>
+              
             </C.UploadForm>
 
           {/* Lista Imagens*/}
