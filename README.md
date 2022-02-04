@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+#Link do projeto com a minha base de dados do firestore: https://mygallery-react-firebase.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
